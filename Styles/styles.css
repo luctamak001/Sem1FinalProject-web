@@ -67,15 +67,8 @@ a:link, a:visited {
 
     }
 
-    #about .img {
-        transition: width 2s, height 2s, background-color 2s, transform 2s;
-    }
-    #about .img:hover {
-        width: 30%;
-        transform: rotate(360deg);
-    }
 
-    .box2 {
+    .box1 {
         width: 600px;
         height: 200px;
         border: 2px solid black;
@@ -88,7 +81,7 @@ a:link, a:visited {
 
         .h2 {
             border: 2px solid teal;
-            display: flex;
+            display: grid;
         }
 
         .p2 {
@@ -103,7 +96,27 @@ a:link, a:visited {
 
         }
     }
-        .box3 {
+
+    #about .img {
+             transition: width 2s, height 2s, background-color 2s, transform 2s;
+         }
+    #about .img:hover {
+        width: 30%;
+        transform: rotate(360deg);
+    }
+
+    .box2{
+        width: 600px;
+        height: auto;
+        move-to: right;
+        border: 2px solid black;
+        padding: 10px;
+        display: grid;
+        justify-content: center;
+        background: linear-gradient(to right, teal, paleturquoise, turquoise);
+    }
+
+.box3 {
             width: 600px;
             height: 200px;
             border: 2px solid black;
@@ -115,9 +128,8 @@ a:link, a:visited {
             background: linear-gradient(to right, teal, paleturquoise, turquoise);
 
         .h3{
-            height: 95px;
             border: 2px solid teal;
-            display: flex;
+            display: grid;
         }
         .p3{
             position: relative;
