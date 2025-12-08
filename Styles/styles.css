@@ -11,14 +11,16 @@ body {
     background-size: cover;
 }
 header {
-    background-color: cadetblue;
-    color: whitesmoke;
+    background-image: radial-gradient(60% 80% at 20% 20%, rgba(255, 255, 255, 0.3), transparent 60%),
+    linear-gradient(135deg, #ffffff 0%, #3c6cdd 100%);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    color: grey;
     text-align: center;
 }
 
 #main h2{
     text-align: center;
-    color: #0c6c6c;
+    color: #333332;
 }
 
 #main p{
@@ -71,6 +73,63 @@ a:link, a:visited {
     #about .img:hover {
         width: 30%;
         transform: rotate(360deg);
+    }
+
+    .box2 {
+        width: 600px;
+        height: 200px;
+        border: 2px solid black;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: linear-gradient(to right, teal, paleturquoise, turquoise);
+
+        .h2 {
+            border: 2px solid teal;
+            display: flex;
+        }
+
+        .p2 {
+            position: relative;
+            right: -10px;
+            border: 2px solid turquoise;
+            display: flex;
+        }
+
+        .p2:hover {
+            background-color: turquoise;
+
+        }
+    }
+        .box3 {
+            width: 600px;
+            height: 200px;
+            border: 2px solid black;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(to right, teal, paleturquoise, turquoise);
+
+        .h3{
+            height: 95px;
+            border: 2px solid teal;
+            display: flex;
+        }
+        .p3{
+            position: relative;
+            right: -10px;
+            border: 2px solid turquoise;
+            display: flex;
+        }
+
+        .p3:hover{
+            background-color: turquoise;
+
+        }
     }
 
     #services {
@@ -168,3 +227,7 @@ a:link, a:visited {
     #contact p {
         text-align: center;
     }
+
+#row1{
+    display: flex;
+}
