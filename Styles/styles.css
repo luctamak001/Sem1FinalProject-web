@@ -49,6 +49,7 @@ a:link, a:visited {
     text-align: center;
     display: inline-block;
     border-radius: 5px;
+    border: 2px solid #2946f1;
     transition: background-color 1s ease-out, transform 1s ease-out;
 }
 
@@ -61,25 +62,4 @@ a:hover, a:active {
 a:hover, a:active {
     background-color: #2946f1;
     color: turquoise;
-}
-
-#contact {
-    background-color: #333333;
-}
-
-#contact a:hover {
-    background-color: blanchedalmond;
-    color: black;
-}
-
-#contact h1 {
-    text-align: center;
-}
-
-#contact h2 {
-    text-align: center;
-}
-
-#contact p {
-    text-align: center;
 }
