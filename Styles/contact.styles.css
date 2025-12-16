@@ -1,5 +1,4 @@
-
-#contact {
+body{
     background-color: #333333;
 }
 
@@ -22,12 +21,14 @@ a:link, a:visited {
     text-align: center;
     display: inline-block;
     border-radius: 5px;
+    border: 1px solid blanchedalmond;
     transition: background-color 1s ease-out, transform 1s ease-out;
 }
 
-#contact a:hover {
-    background-color: blanchedalmond;
-    color: black;
+a:hover {
+   background-color: blanchedalmond;
+   color: black;
+    transform: scale(1.1);
 }
 
 .container{
@@ -37,7 +38,7 @@ a:link, a:visited {
     display: grid;
     grid-template-areas:
     'header header header header header header'
-    'menu menu content content content content'
+    'void main main main main blank'
     'footer footer footer footer footer footer';
     gap: 5px;
 }
@@ -49,25 +50,30 @@ a:link, a:visited {
     grid-area: header;
 }
 
-#menu{
-    grid-area: menu;
+#main{
+    grid-area: main;
 }
-#content{
-    grid-area: content;
+#void{
+    grid-area: void;
+}
+
+#blank{
+    grid-area: blank;
 }
 
 #footer{
     grid-area: footer;
 }
 
-#contact h1 {
+
+h1 {
     text-align: center;
 }
 
-#contact h2 {
+h2 {
     text-align: center;
 }
 
-#contact p {
+p {
     text-align: center;
 }
