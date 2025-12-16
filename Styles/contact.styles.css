@@ -30,6 +30,21 @@ a:link, a:visited {
     color: black;
 }
 
+.container{
+    border: 1px solid whitesmoke;
+    background-color: lightslategray;
+    padding: 10px;
+    display: grid;
+    grid-template-areas:
+    'header header header header header header'
+    'menu menu content content content content'
+    'footer footer footer footer footer footer';
+    gap: 5px;
+}
+
+.container div{
+    background-color: #333333;
+}
 #contact h1 {
     text-align: center;
 }
