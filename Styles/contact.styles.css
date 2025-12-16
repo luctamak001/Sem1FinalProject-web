@@ -45,6 +45,21 @@ a:link, a:visited {
 .container div{
     background-color: #333333;
 }
+#header{
+    grid-area: header;
+}
+
+#menu{
+    grid-area: menu;
+}
+#content{
+    grid-area: content;
+}
+
+#footer{
+    grid-area: footer;
+}
+
 #contact h1 {
     text-align: center;
 }
