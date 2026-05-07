@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Information</title>
+    <link rel="stylesheet" href="./Styles/Info.styles.css">
+
+</head>
+<body>
+    <section>
+        <form>
+            <h1>Login</h1>
+
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="email" required>
+                <label for="">Email</label>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" required>
+                <label for="">Password</label>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </nav>
+
+
+
+            <div class="forget">
+                <label for=""><input type="checkbox">Remember Me</label>
+                <a href="#">Forget Password</a>
+            </div>
+            <button>Log in</button>
+            <div class="register">
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
+        </form>
+    </section>
+
+    <div id="linkDisplay" style="display:none; margin-top: 20px; color: white;">
+        <!-- The link will appear here after login -->
+    </div>
+</body>
+</html>
