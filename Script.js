@@ -23,22 +23,22 @@ function handleReadMoreClick() {
 
 
 
-async function fetchUserLink(userId) {
-    // 1. Still performing the Supabase check
-    const { data, error } = await supabase
-        .from('user_links')
-        .select('url_link')
-        .eq('user_id', userId)
-        .single();
-
-    }
-
-    // 2. Define the 3 links you want to show
-    const extraLinks = [
-        { name: 'Visit W3Schools!', url: 'https://www.w3schools.com/' },
-        { name: 'Visit Wikipedia.org!', url: 'https://wikipedia.org' },
-        { name: 'Visit AnimeNewsNetwork!', url: 'https://animenewsnetwork.com' }
-    ];
-
-
+// async function fetchUserLink(userId) {
+//     // 1. Still performing the Supabase check
+//     const { data, error } = await supabase
+//         .from('user_links')
+//         .select('url_link')
+//         .eq('user_id', userId)
+//         .single();
+//
+//     }
+//
+//     // 2. Define the 3 links you want to show
+//     const extraLinks = [
+//         { name: 'Visit W3Schools!', url: 'https://www.w3schools.com/' },
+//         { name: 'Visit Wikipedia.org!', url: 'https://wikipedia.org' },
+//         { name: 'Visit AnimeNewsNetwork!', url: 'https://animenewsnetwork.com' }
+//     ];
+//
+//
 

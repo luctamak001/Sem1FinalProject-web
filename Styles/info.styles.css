@@ -1,0 +1,58 @@
+body {
+    background-image: url("../images/Aurora mountain.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a:link, a:visited {
+    background-color: turquoise;
+    color: black;
+    text-decoration: none;
+    padding: 7px 10px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid silver;
+    transition: background-color 2s ease-out, transform 1s ease-out;
+}
+
+a:hover, a:active {
+    background-color: lightskyblue;
+    transform: scale(1.1);
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "menu content"
+    "footer footer";
+    grid-template-columns: 1fr 3fr;
+    gap: 3px;
+    background-color: dodgerblue;
+    padding: 5px;
+}
+.container div {
+    background-color: white;
+    padding: 10px;
+}
+.container div.header {
+    grid-area: header;
+    text-align: center;
+}
+.container div.menu {
+    grid-area: menu;
+}
+.container div.content {
+    grid-area: content;
+}
+.container div.footer {
+    grid-area: footer;
+    text-align: center;
+}
+
