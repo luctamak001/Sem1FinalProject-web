@@ -1,6 +1,6 @@
 const SUPERBASE_URL = `https://infkobjgpzpmiurstpxl.supabase.co`;
 const SUPERBASE_KEY = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImluZmtvYmpncHpwbWl1cnN0cHhsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc2MTYxOTEsImV4cCI6MjA5MzE5MjE5MX0.tPPKIvPjV2XhgO-YMJQnFoTN2kFpRPJDRXPizSaap0o`;
-const db = window.supabase.createClient(SUPERBASE_URL, SUPERBASE_KEY);
+const db = supabase.createClient(SUPERBASE_URL, SUPERBASE_KEY);
 
 function handleReadMoreClick() {
         document.getElementById("myDropdown").classList.toggle("show");
@@ -21,19 +21,22 @@ function handleReadMoreClick() {
 
                         // ============SUPABASE==============
 
-
-
-async function fetchUserLink(userId) {
+async function loadEntries() {
     // 1. Still performing the Supabase check
     const { data, error } = await db
         .from('dropdown_links')
-        .select('url_link')
-        .eq('user_id', userId)
-        .single();
+        .select("*");
+
+    if (error) {
+        console.error("Error fetching data:", error.message);
+        return;
+    }
 
     let html = "";
     data.forEach(entry => {
-        html += `<a href=${entry.url}>${entry.label}</a><br>`
+        if (entry.link && entry.name) {
+            html += `<a href="${escapeHtml(entry.link)}" target="_blank">${escapeHtml(entry.name)}</a><br>`;
+        }
     });
     document.querySelector('#entries').innerHTML = html;
 }
@@ -58,26 +61,22 @@ document.querySelector("#menu").addEventListener("submit", async (e) => {
         return;
     }
 
-    document.querySelector("#name-a").value = "";
-    document.querySelector("#link-b").value = "";
-    document.querySelector("#web-c").value = "";
-
-
-    loadEntries();
-
+    e.target.reset();
+    await loadEntries();
 });
 
-loadEntries();
+function escapeHtml(str) {
+    if (!str) return '';
+        return str.replace(/[&<>"']/g, match => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;'
+        }[match]));
+    }
 
-
-
-
-    // 2. Define the 3 links you want to show
-    const extraLinks = [
-        { name: 'Visit W3Schools!', url: 'https://www.w3schools.com/' },
-        { name: 'Visit Wikipedia.org!', url: 'https://wikipedia.org' },
-        { name: 'Visit AnimeNewsNetwork!', url: 'https://animenewsnetwork.com' }
-    ];
-
+// 3. Automatically run loadEntries the moment the webpage loads
+document.addEventListener("DOMContentLoaded", loadEntries);
 
 
