@@ -10,7 +10,7 @@ ul{
 }
 
 a:link, a:visited {
-    background-color: turquoise;
+    background-color: lightskyblue;
     color: black;
     text-decoration: none;
     padding: 7px 10px;
@@ -22,37 +22,32 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-    background-color: lightskyblue;
+    background-color: darkcyan;
     transform: scale(1.1);
 }
 
 .container {
     display: grid;
-    grid-template-areas:
-    "header header"
-    "menu content"
-    "footer footer";
+    grid-template-areas: "header header" "menu content" "footer footer";
     grid-template-columns: 1fr 3fr;
     gap: 3px;
-    background-color: dodgerblue;
+    background-color: rgba(30, 144, 255, 0.4); /* Translucent grid lines */
     padding: 5px;
 }
+
+/* Retained the glass blur property over the Aurora background */
 .container div {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 10px;
 }
-.container div.header {
-    grid-area: header;
-    text-align: center;
-}
-.container div.menu {
-    grid-area: menu;
-}
-.container div.content {
-    grid-area: content;
-}
-.container div.footer {
-    grid-area: footer;
-    text-align: center;
-}
 
+.container div.header { grid-area: header; text-align: center; }
+.container div.menu { grid-area: menu; }
+.container div.content { grid-area: content; }
+.container div.footer { grid-area: footer; text-align: center; }
+
+h3{
+    text-align: center;
+}

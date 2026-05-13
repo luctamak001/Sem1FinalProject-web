@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>INFORMATION</title>
-    <script src="./Script.js"></script>
     <link rel="stylesheet" href="Styles/info.styles.css">
-
-
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
 
@@ -20,13 +18,25 @@
 
 <div class="container">
     <div class="header"><h2>MATERIALS</h2></div>
-    <div class="menu"><a href="https://w3schools.com">Visit W3Schools!</a>
-        <br><a href="https://wikipedia.org">Wikipedia</a>
-        <br><a href="https://animenewsnetwork.com">AnimeNewsNetwork</a></div>
-    <div class="content"><h3>About</h3><p></p></div>
-    <div class="footer"><h4>Footer</h4></div>
+    <div id="menu">
+        <a id="name-a" href="#">Visit W3Schools!</a>
+        <br><a id="link-b" href="#">Wikipedia!</a>
+        <br><a id="web-c" href="#">>AnimeNewsNetwork</a>
+    </div>
+    <div class="content">
+        <h3>About</h3>
+        <p>W3Schools is to learn and understand coding if you want to learn more about how our web is made.
+        Wikipedia is to learn about the world and any other information you would like to know.
+            AnimeNewsNetwork is to get information about anime.
+        </p>
+    </div>
+    <div class="footer">
+        <h4>Footer</h4>
+    </div>
 </div>
 
+<div id="entries"></div>
 
+<script src="./Script.js"></script>
 </body>
 </html>
